@@ -68,16 +68,17 @@ export function Navbar() {
   }
 
   return (
-    <motion.header
-      initial={{ y: -24, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      className={`fixed left-0 right-0 top-0 z-[9992] transition-colors duration-300 ${
-        open || scrolled
-          ? 'border-b border-pink/20 bg-dark-2/80 backdrop-blur-md'
-          : 'border-b border-transparent bg-transparent'
-      }`}
-    >
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
+    <>
+      <motion.header
+        initial={{ y: -24, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        className={`fixed left-0 right-0 top-0 z-[9992] transition-colors duration-300 ${
+          open || scrolled
+            ? 'border-b border-pink/20 bg-dark-2/80 backdrop-blur-md'
+            : 'border-b border-transparent bg-transparent'
+        }`}
+      >
+        <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
         <button
           type="button"
           onClick={() => go('home')}
@@ -114,7 +115,22 @@ export function Navbar() {
         >
           {open ? <HiX /> : <HiMenuAlt3 />}
         </button>
-      </nav>
+        </nav>
+      </motion.header>
+
+      <AnimatePresence>
+        {open && (
+          <motion.button
+            type="button"
+            aria-label="Close menu"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setOpen(false)}
+            className="fixed inset-0 z-[9990] border-0 bg-dark/70 backdrop-blur-xl supports-[backdrop-filter]:bg-dark/55 md:hidden"
+          />
+        )}
+      </AnimatePresence>
 
       <AnimatePresence>
         {open && (
@@ -122,7 +138,7 @@ export function Navbar() {
             initial={{ opacity: 0, y: -12 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
-            className="absolute left-0 right-0 top-full z-[9991] flex h-[calc(100dvh-73px)] flex-col overflow-y-auto border-t border-pink/10 bg-dark/75 px-6 pb-10 pt-6 backdrop-blur-xl supports-[backdrop-filter]:bg-dark/60 md:hidden"
+            className="fixed inset-x-0 top-[73px] z-[9991] flex h-[calc(100dvh-73px)] flex-col overflow-y-auto border-t border-pink/10 bg-dark/75 px-6 pb-10 pt-6 backdrop-blur-xl supports-[backdrop-filter]:bg-dark/60 md:hidden"
           >
             <motion.ul
               variants={staggerContainer}
@@ -148,6 +164,7 @@ export function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.header>
+
+    </>
   )
 }
