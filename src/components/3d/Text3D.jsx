@@ -7,7 +7,7 @@ export function Text3DName({ compact = false }) {
   const white = useRef(null)
 
   return (
-    <Center position={[compact ? 0.95 : 0, compact ? 1.55 : 0.85, 0]}>
+    <Center position={[0, compact ? 1.45 : 0.85, 0]}>
       <group ref={group}>
         <pointLight
           ref={pink}
@@ -25,8 +25,9 @@ export function Text3DName({ compact = false }) {
         />
         <Text3D
           font="/fonts/helvetiker_bold.typeface.json"
-          size={compact ? 0.24 : 0.38}
+          size={compact ? 0.22 : 0.38}
           height={compact ? 0.07 : 0.1}
+          letterSpacing={compact ? -0.035 : -0.02}
           curveSegments={10}
           bevelEnabled
           bevelThickness={0.018}
