@@ -21,14 +21,12 @@ export function Experience() {
           description="Education milestones and campus events—each step on the timeline below."
         />
 
-        <div className="mx-auto max-w-3xl">
+        <div className="mx-auto mt-12 max-w-3xl md:mt-0">
           <div className="relative">
-            {preCollegeItems.length > 0 ? (
-              <div
-                className="pointer-events-none absolute left-[15px] top-3 bottom-8 z-0 w-[2px] bg-gradient-to-b from-pink via-pink/75 to-pink/20 shadow-[0_0_10px_rgba(236,72,153,0.35)] md:left-1/2 md:-translate-x-1/2"
-                aria-hidden
-              />
-            ) : null}
+            <div
+              className="pointer-events-none absolute left-[15px] top-3 bottom-8 z-0 w-[2px] bg-gradient-to-b from-pink via-pink/75 to-pink/20 shadow-[0_0_10px_rgba(236,72,153,0.35)] md:left-1/2 md:-translate-x-1/2"
+              aria-hidden
+            />
 
             <motion.div
               variants={staggerContainer}
@@ -45,15 +43,15 @@ export function Experience() {
                   <motion.div
                     key={item.id}
                     variants={fadeInUp}
-                    className={`relative pb-14 last:pb-2 md:grid md:grid-cols-2 md:gap-10 ${isRight ? 'md:pl-12' : 'md:pr-12'}`}
+                    className={`relative pb-16 last:pb-4 md:grid md:grid-cols-2 md:gap-10 ${isRight ? 'md:pl-12' : 'md:pr-12'}`}
                   >
                     <span
-                      className="absolute left-[9px] top-2 z-[1] h-4 w-4 rounded-full border-2 border-pink bg-dark shadow-[var(--glow-sm)] md:left-1/2 md:-translate-x-1/2"
+                        className="absolute left-[10px] top-2 z-[1] h-3 w-3 rounded-full border-2 border-pink bg-dark shadow-[var(--glow-sm)] md:left-1/2 md:h-4 md:w-4 md:-translate-x-1/2"
                       aria-hidden
                     />
 
                     <div
-                      className={`${isRight ? 'ml-auto md:col-start-2 md:ml-0' : 'mr-auto md:col-start-1 md:mr-0'} w-[calc(100%-1.5rem)] max-w-[26rem] md:w-auto md:max-w-none`}
+                      className={`${isRight ? 'ml-8 mr-auto md:col-start-2 md:ml-0 md:mr-0' : 'ml-8 mr-auto md:col-start-1 md:ml-0 md:mr-0'} w-[calc(100%-2.5rem)] max-w-[26rem] md:w-auto md:max-w-none`}
                     >
                       <GlassCard
                         glowOnHover
@@ -108,11 +106,6 @@ export function Experience() {
                 viewport={{ once: true, amount: 0.08 }}
                 className="relative mt-6 overflow-hidden rounded-[34px] border border-pink/20 bg-gradient-to-br from-pink/5 via-transparent to-transparent px-4 py-8 shadow-[0_0_0_1px_rgba(236,72,153,0.08)] md:mt-8 md:px-8 md:py-10"
               >
-                <div
-                  className="pointer-events-none absolute left-[15px] top-8 bottom-8 z-0 w-[2px] bg-gradient-to-b from-pink via-pink/80 to-pink/25 shadow-[0_0_10px_rgba(236,72,153,0.35)] md:left-1/2 md:-translate-x-1/2"
-                  aria-hidden
-                />
-
                 {collegeJourneyItems.map((item, index) => {
                   const isRight = index % 2 === 1
                   const isEducation = item.kind === 'education'
@@ -121,15 +114,15 @@ export function Experience() {
                     <motion.div
                       key={item.id}
                       variants={fadeInUp}
-                      className={`relative pb-14 last:pb-2 md:grid md:grid-cols-2 md:gap-10 ${isRight ? 'md:pl-12' : 'md:pr-12'}`}
+                      className={`relative pb-16 last:pb-4 md:grid md:grid-cols-2 md:gap-10 ${isRight ? 'md:pl-12' : 'md:pr-12'}`}
                     >
                       <span
-                        className="absolute left-[9px] top-2 z-[1] h-4 w-4 rounded-full border-2 border-pink bg-dark shadow-[var(--glow-sm)] md:left-1/2 md:-translate-x-1/2"
+                        className="absolute left-[10px] top-2 z-[1] h-3 w-3 rounded-full border-2 border-pink bg-dark shadow-[var(--glow-sm)] md:left-1/2 md:h-4 md:w-4 md:-translate-x-1/2"
                         aria-hidden
                       />
 
                         <div
-                          className={`${isRight ? 'ml-auto md:col-start-2 md:ml-0' : 'mr-auto md:col-start-1 md:mr-0'} w-[calc(100%-1.5rem)] max-w-[26rem] md:w-auto md:max-w-none`}
+                          className={`${isRight ? 'ml-8 mr-auto md:col-start-2 md:ml-0 md:mr-0' : 'ml-8 mr-auto md:col-start-1 md:ml-0 md:mr-0'} w-[calc(100%-2.5rem)] max-w-[26rem] md:w-auto md:max-w-none`}
                         >
                         <GlassCard
                           glowOnHover

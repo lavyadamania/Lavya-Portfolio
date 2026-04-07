@@ -98,7 +98,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden pt-20 md:justify-start md:pt-24"
+      className="relative flex min-h-screen flex-col items-center justify-start overflow-hidden pt-20 md:pt-24"
     >
       <div className="pointer-events-none absolute inset-0 z-0 md:pointer-events-auto">
         {reduceMotion ? (
@@ -125,7 +125,7 @@ export function Hero() {
         variants={staggerContainer}
         initial="hidden"
         animate="visible"
-        className="relative z-10 mx-auto flex w-full max-w-4xl flex-col items-center px-5 pb-24 text-center md:mt-[min(36vh,300px)] md:pb-28 lg:mt-[32vh]"
+        className="relative z-10 mx-auto mt-[26vh] flex w-full max-w-4xl flex-col items-center px-5 pb-24 text-center sm:mt-[22vh] md:mt-[min(36vh,300px)] md:pb-28 lg:mt-[32vh]"
       >
         <motion.div
           variants={fadeInUp}
