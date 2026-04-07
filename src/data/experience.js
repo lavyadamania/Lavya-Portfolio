@@ -17,7 +17,7 @@ export const journeyItems = [
   {
     id: 'be',
     kind: 'education',
-    title: 'B.E., IT-A',
+    title: 'B.E., IT',
     institution: 'Thakur College Of Engineering And Technology',
     period: '2024 – Present',
   },
