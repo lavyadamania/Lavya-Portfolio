@@ -46,6 +46,15 @@ export function Navbar() {
     return () => obs.disconnect()
   }, [])
 
+  useEffect(() => {
+    if (!open) return undefined
+    const prevOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.body.style.overflow = prevOverflow
+    }
+  }, [open])
+
   const go = (id) => {
     setOpen(false)
     const el = document.getElementById(id)
@@ -62,8 +71,8 @@ export function Navbar() {
     <motion.header
       initial={{ y: -24, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      className={`fixed left-0 right-0 top-0 z-[9970] transition-colors duration-300 ${
-        scrolled
+      className={`fixed left-0 right-0 top-0 z-[9992] transition-colors duration-300 ${
+        open || scrolled
           ? 'border-b border-pink/20 bg-dark-2/80 backdrop-blur-md'
           : 'border-b border-transparent bg-transparent'
       }`}
@@ -110,10 +119,10 @@ export function Navbar() {
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: '100vh' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="absolute left-0 right-0 top-full flex flex-col bg-dark/98 px-6 pb-10 pt-6 backdrop-blur-lg md:hidden"
+            initial={{ opacity: 0, y: -12 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -12 }}
+            className="absolute left-0 right-0 top-full z-[9991] flex h-[calc(100dvh-73px)] flex-col overflow-y-auto border-t border-pink/10 bg-dark/75 px-6 pb-10 pt-6 backdrop-blur-xl supports-[backdrop-filter]:bg-dark/60 md:hidden"
           >
             <motion.ul
               variants={staggerContainer}

@@ -27,7 +27,7 @@ export function Text3DName({ compact = false }) {
           font="/fonts/helvetiker_bold.typeface.json"
           size={compact ? 0.22 : 0.38}
           height={compact ? 0.07 : 0.1}
-          letterSpacing={compact ? -0.035 : -0.02}
+          letterSpacing={compact ? 0.03 : 0.04}
           curveSegments={10}
           bevelEnabled
           bevelThickness={0.018}
