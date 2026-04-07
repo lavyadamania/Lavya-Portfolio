@@ -1,0 +1,37 @@
+export const personal = {
+  name: 'Lavya Damania',
+  tagline:
+    'Blending Logic with Creativity in IT | Always Learning, Always Adapting',
+  role: 'Full Stack Developer & Creative Technologist',
+  location: 'Mumbai, India',
+  email: 'lavya@example.com',
+  githubUsername: 'lavyadamania',
+  linkedin: 'https://www.linkedin.com/in/lavya-damania-6778472a7/',
+  instagram: 'https://www.instagram.com/lavya_damania_/',
+  typewriterRoles: [
+    'Full Stack Developer',
+    'Creative Technologist',
+    'Problem Solver',
+    'UI/UX Enthusiast',
+    'Always Learning',
+  ],
+  stats: {
+    experience: '2 Years Experience',
+    experienceValue: 2,
+    projects: 7,
+    technologies: 18,
+  },
+  bio: `I'm Lavya Damania, I don't just build projects, I build systems that question how things work. My work sits at the intersection of technology, human behavior, and deeper patterns most people overlook. I'm drawn to ideas that aren't obvious: the ones that require breaking things down to their core and rebuilding them with intent, clarity, and meaning.`,
+  bioExtended: `At the same time, I stay grounded in strong technical fundamentals and structured problem-solving. I focus on creating scalable, efficient solutions while bringing a perspective that goes beyond just functionality. I'm driven by curiosity, continuous learning, and the need to build things that are not only useful but also thoughtful and impactful.`,
+  whatIBring: [
+    'System-first thinking from core idea to real-world impact',
+    'Driven by patterns in human behavior and hidden system dynamics',
+    'Build with depth—not just how it works, but why it exists',
+    'Strong focus on structured problem-solving and clean architecture',
+    'Curious about unconventional ideas and overlooked perspectives',
+    'Blend analytical logic with narrative-driven project design',
+    'Comfortable working with ambiguity, breaking it into clarity',
+    'Focused on meaningful, scalable, and intentional solutions',
+  ],
+  resumeUrl: '/resume.pdf',
+}
