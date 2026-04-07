@@ -15,6 +15,7 @@ import {
   SiReact,
   SiRedis,
   SiTailwindcss,
+  SiVite,
 } from 'react-icons/si'
 
 function fibonacciSphere(samples, radius) {
@@ -78,6 +79,7 @@ const orbiters = [
   { Icon: SiRedis, label: 'Redis' },
   { Icon: SiNeo4J, label: 'Neo4j' },
   { Icon: SiReact, label: 'React' },
+  { Icon: SiVite, label: 'Vite' },
   { Icon: SiTailwindcss, label: 'Tailwind' },
   { Icon: SiCss, label: 'CSS' },
   { Icon: SiDocker, label: 'Docker' },

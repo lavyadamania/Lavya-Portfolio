@@ -23,6 +23,13 @@ export function Experience() {
 
         <div className="mx-auto max-w-3xl">
           <div className="relative">
+            {preCollegeItems.length > 0 ? (
+              <div
+                className="pointer-events-none absolute left-[15px] top-3 bottom-8 z-0 w-[2px] bg-gradient-to-b from-pink via-pink/75 to-pink/20 shadow-[0_0_10px_rgba(236,72,153,0.35)] md:left-1/2 md:-translate-x-1/2"
+                aria-hidden
+              />
+            ) : null}
+
             <motion.div
               variants={staggerContainer}
               initial="hidden"
@@ -102,7 +109,7 @@ export function Experience() {
                 className="relative mt-6 overflow-hidden rounded-[34px] border border-pink/20 bg-gradient-to-br from-pink/5 via-transparent to-transparent px-4 py-8 shadow-[0_0_0_1px_rgba(236,72,153,0.08)] md:mt-8 md:px-8 md:py-10"
               >
                 <div
-                  className="pointer-events-none absolute left-[15px] top-8 bottom-8 w-px bg-gradient-to-b from-pink via-pink/45 to-pink/10 md:left-1/2 md:-translate-x-1/2"
+                  className="pointer-events-none absolute left-[15px] top-8 bottom-8 z-0 w-[2px] bg-gradient-to-b from-pink via-pink/80 to-pink/25 shadow-[0_0_10px_rgba(236,72,153,0.35)] md:left-1/2 md:-translate-x-1/2"
                   aria-hidden
                 />
 

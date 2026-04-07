@@ -35,18 +35,16 @@ function getNarrow() {
   return window.matchMedia('(max-width: 767px)').matches
 }
 
-function HeroScene({ mouseRef, showText3d }) {
+function HeroScene({ mouseRef, narrow }) {
   return (
     <>
       <ambientLight intensity={0.22} />
       <BackgroundMesh />
       <ParticleField mouseRef={mouseRef} />
       <FloatingGeometry />
-      {showText3d && (
-        <Suspense fallback={null}>
-          <Text3DName />
-        </Suspense>
-      )}
+      <Suspense fallback={null}>
+        <Text3DName compact={narrow} />
+      </Suspense>
     </>
   )
 }
@@ -113,7 +111,7 @@ export function Hero() {
               gl={{ alpha: true, antialias: true }}
               className="h-full w-full"
             >
-              <HeroScene mouseRef={mouseRef} showText3d={!narrow} />
+              <HeroScene mouseRef={mouseRef} narrow={narrow} />
             </Canvas>
           </ErrorBoundary>
         )}
@@ -145,7 +143,7 @@ export function Hero() {
             variants={fadeInUp}
             className="whitespace-pre-line font-syne text-4xl font-extrabold uppercase leading-tight tracking-tight text-pink drop-shadow-[var(--glow)] sm:text-5xl md:hidden"
           >
-            {personal.name.split(' ').join('\n')}
+            {reduceMotion ? personal.name.split(' ').join('\n') : ''}
           </motion.h1>
         )}
 
